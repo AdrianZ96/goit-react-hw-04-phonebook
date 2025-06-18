@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import css from './ContactForm.module.css';
-import { nanoid } from 'nanoid';
 
 export const ContactForm = ({ onAddContact }) => {
   const [name, setName] = useState('');
@@ -17,7 +16,6 @@ export const ContactForm = ({ onAddContact }) => {
     e.preventDefault();
 
     onAddContact({
-      id: nanoid(),
       name,
       number,
     });
